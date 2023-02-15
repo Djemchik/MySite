@@ -1,6 +1,6 @@
 const url = 'https://businfo82.ru/wap/online/?srv_id=2&uniqueid=1576';
 
-fetch(url)
+fetch(url,{ mode: 'no-cors'})
   .then(response => response.text())
   .then(html => {
     const $ = cheerio.load(html);
